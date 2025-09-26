@@ -1,0 +1,222 @@
+/* --- NEW & IMPROVED AVATAR PAGE STYLES --- */
+
+/* Use Poppins for forms and UI text for a modern feel */
+#avatar-creation {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Responsive Grid Layout --- */
+.avatar-grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* --- Form Section (Left) --- */
+.avatar-form-section {
+    grid-column: 1 / span 6; /* Takes first 6 columns on desktop */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 2.8rem); /* Responsive font size */
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.avatar-form-section fieldset {
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #fcfcfc;
+}
+
+.avatar-form-section legend {
+    font-weight: 600;
+    color: var(--primary-accent, #4169E1);
+    padding: 0 0.5rem;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.input-row:last-child {
+    margin-bottom: 0;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-group:last-child {
+    margin-bottom: 0;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s;
+    background-color: #fff;
+}
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-accent, #4169E1);
+    box-shadow: 0 0 0 4px rgba(65, 105, 225, 0.1);
+}
+
+.btn-full-width {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+}
+
+/* --- Progress Bar --- */
+.progress-bar-container {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+.progress-bar {
+    width: 0%;
+    height: 10px;
+    background: linear-gradient(90deg, var(--secondary-accent, #B2D8D8), var(--primary-accent, #4169E1));
+    border-radius: 20px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* --- Color Swatches --- */
+.swatches { display: flex; gap: 12px; align-items: center; }
+.swatch {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.2s;
+    position: relative;
+}
+.swatch.selected {
+    border-color: var(--primary-accent, #4169E1);
+    transform: scale(1.15);
+}
+.swatch.selected::after {
+    content: '✔';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+
+/* --- 3D Preview Section (Right) --- */
+.avatar-preview-section {
+    grid-column: 7 / span 6; /* Takes last 6 columns on desktop */
+    position: relative;
+    min-height: 70vh;
+    background-color: #f7f9fc;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E0E0E0;
+}
+#avatar-canvas-container { width: 100%; height: 100%; border-radius: 16px; cursor: grab; }
+#avatar-canvas-container:active { cursor: grabbing; }
+
+/* --- Loading Spinner --- */
+.loader {
+    border: 6px solid #e9ecef;
+    border-top: 6px solid var(--primary-accent, #4169E1);
+    border-radius: 50%;
+    width: 50px; height: 50px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    z-index: 10;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* --- 3D Controls with Glassmorphism Effect --- */
+.controls-container {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 12px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.controls-container .btn {
+    padding: 8px 16px;
+    font-size: 1rem;
+}
+.controls-container .btn-outline {
+    font-size: 1.5rem; /* For arrow icons */
+    padding: 4px 12px;
+}
+
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* == Tablet View (e.g., iPads) == */
+@media (max-width: 1024px) {
+    .avatar-grid-container {
+        grid-template-columns: 1fr; /* Stack columns */
+    }
+    .avatar-form-section, .avatar-preview-section {
+        grid-column: 1 / -1; /* Full width */
+    }
+    .avatar-preview-section {
+        min-height: 500px; /* Adjust height for tablet */
+    }
+}
+
+/* == Mobile View (e.g., iPhones, Android) == */
+@media (max-width: 600px) {
+    .form-header h1 {
+        font-size: 1.8rem;
+    }
+    .input-row {
+        grid-template-columns: 1fr; /* Stack inputs in a row */
+    }
+    .avatar-form-section fieldset {
+        padding: 1rem;
+    }
+    .controls-container {
+        padding: 8px 12px;
+        gap: 0.5rem;
+    }
+    .controls-container .btn {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}

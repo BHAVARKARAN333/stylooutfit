@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Your 3D Avatar - StyloOutfit</title>
+    <meta name="description" content="Build a highly-detailed 3D avatar with precise body measurements, face photo upload, and style preferences on StyloOutfit." />
+    
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/avatar.css" />
+</head>
+<body>
+    <header class="site-header section-divider">
+        <div class="container header-inner">
+          <a href="index.html" class="logo" aria-label="StyloOutfit Home"><img src="./assets/images/STYLOOUTFIT.svg" alt="StyloOutfit Logo"/></a>
+            <nav class="primary-nav" aria-label="Primary Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="avatar.html" aria-current="page">Create Avatar</a></li>
+                    <li><a href="outfit.html">Try Outfits</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <button class="nav-cta" id="navCta" type="button">Get Started</button>
+        </div>
+    </header>
+
+    <main id="avatar-creation">
+        <div class="container">
+            <div class="avatar-grid-container">
+                <div class="avatar-form-section">
+                    <div class="form-header">
+                        <h1>Your Style, Your Avatar</h1>
+                        <p>Complete your profile to generate a hyper-realistic 3D model.</p>
+                    </div>
+
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+
+                    <form id="avatar-form">
+                        <fieldset>
+                            <legend>Basic Info</legend>
+                            <div class="input-row">
+                                <select id="gender" class="form-input" required><option value="">Select Gender...</option><option value="male">Male</option><option value="female">Female</option></select>
+                                <input type="number" id="age" class="form-input" placeholder="Your Age" min="13" max="99" required>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Body Measurements</legend>
+                            <div class="input-row">
+                                <input type="number" id="height" class="form-input" placeholder="Height (cm)" required>
+                                <input type="number" id="weight" class="form-input" placeholder="Weight (kg)" required>
+                            </div>
+                            <div class="input-row">
+                                <input type="number" id="chest" class="form-input" placeholder="Chest (cm)">
+                                <input type="number" id="waist" class="form-input" placeholder="Waist (cm)">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Appearance</legend>
+                            <div class="form-group"><label>Skin Tone</label><div class="swatches skin-swatches"><div class="swatch" data-color="#F9E4D4" style="background-color: #F9E4D4;"></div><div class="swatch" data-color="#E8C3A9" style="background-color: #E8C3A9;"></div><div class="swatch" data-color="#D1A184" style="background-color: #D1A184;"></div><div class="swatch" data-color="#A17254" style="background-color: #A17254;"></div><div class="swatch" data-color="#5C3B28" style="background-color: #5C3B28;"></div></div></div>
+                            <div class="form-group"><label>Hairstyle & Color</label><div class="input-row"><select id="hairstyle" class="form-input" required><option value="short">Short</option><option value="medium">Medium</option><option value="long">Long</option></select><div class="swatches hair-swatches"><div class="swatch" data-color="#000000" style="background-color: #000000;"></div><div class="swatch" data-color="#4E342E" style="background-color: #4E342E;"></div><div class="swatch" data-color="#BCAAA4" style="background-color: #BCAAA4;"></div></div></div></div>
+                            <div class="form-group"><label for="facePhoto">Upload Face Photo (Optional)</label><input type="file" id="facePhoto" class="form-input" accept="image/png, image/jpeg"></div>
+                        </fieldset>
+                        <button type="submit" class="btn btn-primary btn-full-width">Generate My Avatar</button>
+                    </form>
+                </div>
+
+                <div class="avatar-preview-section">
+                    <div class="loader" id="loader"></div>
+                    <div id="avatar-canvas-container"></div>
+                    <div class="controls-container">
+                        <button id="rotate-left-btn" class="btn btn-outline" type="button" aria-label="Rotate Left">⟲</button>
+                        <button id="save-avatar-btn" class="btn btn-accent" type="button">Save Avatar</button>
+                        <button id="rotate-right-btn" class="btn btn-outline" type="button" aria-label="Rotate Right">⟳</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> StyloOutfit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    <script src="./js/avatar.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

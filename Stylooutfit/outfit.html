@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Try Outfits — StyloOutfit</title>
+    <meta name="description" content="Discover and try curated outfits on your personalized 3D avatar with AI-powered recommendations." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="StyloOutfit Home">Stylo<span>Outfit</span></a>
+        <nav class="primary-nav" aria-label="Primary Navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="avatar.html">Create Avatar</a></li>
+            <li><a href="outfit.html" aria-current="page">Try Outfits</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <button class="nav-cta" id="navCta" type="button">Get Started</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="outfit-title">
+        <div class="container hero-inner">
+          <h1 id="outfit-title">Discover Your Perfect Look</h1>
+          <p class="hero-subtitle">Explore curated style collections and preview them instantly on your personalized avatar.</p>
+          <div class="hero-actions">
+            <a href="avatar.html" class="btn btn-accent" id="heroCta">Back to Avatar</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="occasions section-divider" aria-labelledby="occasion-heading">
+        <div class="container">
+          <h2 id="occasion-heading">Style for Every Occasion</h2>
+          
+          <!-- New Occasion Controls -->
+          <div class="occasions-controls" aria-label="Occasion categories and filters">
+            <div class="category-tabs" role="tablist" aria-label="Occasion categories">
+              <button class="tab is-active" role="tab" aria-selected="true">Student</button>
+              <button class="tab" role="tab">Party</button>
+              <button class="tab" role="tab">Wedding</button>
+              <button class="tab" role="tab">Casual</button>
+              <button class="tab" role="tab">Work</button>
+              <button class="tab" role="tab">Festive</button>
+              <button class="tab" role="tab">Travel</button>
+              <button class="tab" role="tab">Date Night</button>
+              <button class="tab" role="tab">Sporty</button>
+              <button class="tab" role="tab">Interview</button>
+            </div>
+
+            <div class="gender-filters" role="radiogroup" aria-label="Gender filter">
+              <button class="chip is-active" role="radio" aria-checked="true">All</button>
+              <button class="chip" role="radio" aria-checked="false">Male</button>
+              <button class="chip" role="radio" aria-checked="false">Female</button>
+            </div>
+          </div>
+
+          <!-- Cards Grid 4 cols desktop, 2 cols mobile -->
+          <div class="occasion-cards">
+            <div class="occasion-card">
+              <button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg>
+              </button>
+              <img src="https://picsum.photos/seed/occ1/800/480" alt="Look 1" />
+              <div class="card-title">Recommended Look 1</div>
+            </div>
+            <div class="occasion-card">
+              <button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg>
+              </button>
+              <img src="https://picsum.photos/seed/occ2/800/480" alt="Look 2" />
+              <div class="card-title">Recommended Look 2</div>
+            </div>
+            <div class="occasion-card">
+              <button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg>
+              </button>
+              <img src="https://picsum.photos/seed/occ3/800/480" alt="Look 3" />
+              <div class="card-title">Recommended Look 3</div>
+            </div>
+            <div class="occasion-card">
+              <button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg>
+              </button>
+              <img src="https://picsum.photos/seed/occ4/800/480" alt="Look 4" />
+              <div class="card-title">Recommended Look 4</div>
+            </div>
+
+            <!-- Additional cards to make 4 columns x 10 rows (40 total) -->
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ5/800/480" alt="Look 5" /><div class="card-title">Recommended Look 5</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ6/800/480" alt="Look 6" /><div class="card-title">Recommended Look 6</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ7/800/480" alt="Look 7" /><div class="card-title">Recommended Look 7</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ8/800/480" alt="Look 8" /><div class="card-title">Recommended Look 8</div></div>
+
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ9/800/480" alt="Look 9" /><div class="card-title">Recommended Look 9</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ10/800/480" alt="Look 10" /><div class="card-title">Recommended Look 10</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ11/800/480" alt="Look 11" /><div class="card-title">Recommended Look 11</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ12/800/480" alt="Look 12" /><div class="card-title">Recommended Look 12</div></div>
+
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ13/800/480" alt="Look 13" /><div class="card-title">Recommended Look 13</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ14/800/480" alt="Look 14" /><div class="card-title">Recommended Look 14</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ15/800/480" alt="Look 15" /><div class="card-title">Recommended Look 15</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ16/800/480" alt="Look 16" /><div class="card-title">Recommended Look 16</div></div>
+
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ17/800/480" alt="Look 17" /><div class="card-title">Recommended Look 17</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ18/800/480" alt="Look 18" /><div class="card-title">Recommended Look 18</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ19/800/480" alt="Look 19" /><div class="card-title">Recommended Look 19</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ20/800/480" alt="Look 20" /><div class="card-title">Recommended Look 20</div></div>
+
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ21/800/480" alt="Look 21" /><div class="card-title">Recommended Look 21</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ22/800/480" alt="Look 22" /><div class="card-title">Recommended Look 22</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ23/800/480" alt="Look 23" /><div class="card-title">Recommended Look 23</div></div>
+            <div class="occasion-card"><button class="like-btn" type="button" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.1 21.35l-1.1-1.02C5.14 15.24 2 12.36 2 8.98 2 6.2 4.2 4 6.98 4c1.64 0 3.22.76 4.22 2 1-1.24 2.58-2 4.22-2C18.8 4 21 6.2 21 8.98c0 3.38-3.14 6.26-8.99 11.35l-1.01 1.02z" fill="currentColor"></path></svg></button><img src="https://picsum.photos/seed/occ24/800/480" alt="Look 24" /><div class="card-title">Recommended Look 24</div></div>
+          </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> StyloOutfit. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+  </html>
+
+

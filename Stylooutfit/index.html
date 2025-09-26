@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic SEO & Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StyloOutfit — AI-Powered Personal Styling Platform</title>
+    <meta
+      name="description"
+      content="Transform your style with AI-powered outfit recommendations. Create your 3D avatar, discover personalized looks, and shop with confidence."
+    />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="StyloOutfit — AI-Powered Personal Styling Platform" />
+    <meta property="og:description" content="Transform your style with AI-powered outfit recommendations. Create your 3D avatar and discover personalized looks." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://stylooutfit.in" />
+
+    <!-- Favicon (optional placeholder) -->
+    <link rel="icon" href="data:," />
+
+    <!-- CSS: linked stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- SAHI CSS PATH -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- Header: Navigation with logo and links -->
+    <header class="site-header section-divider">
+      <div class="container header-inner">
+        <!-- Maine local logo path ko ek working URL se badal diya hai -->
+        <a href="index.html" class="logo" aria-label="StyloOutfit Home"><img src="./assets/images/STYLOOUTFIT.svg" alt="StyloOutfit Logo"/></a>
+        <nav class="primary-nav" aria-label="Primary Navigation">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="avatar.html">Create Avatar</a></li>
+            <li><a href="outfit.html">Try Outfits</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <button class="nav-cta" id="navCta" type="button">Get Started</button>
+      </div>
+    </header>
+
+    <main id="home">
+      <!-- Promo Slider: Auto-playing banners under navbar -->
+      <section class="promo section-divider" aria-label="Featured promotions">
+        <div class="promo-slider" id="promoSlider" data-autoplay="true" data-interval="3000">
+          <div class="slides">
+            <div class="slide"><img src="https://picsum.photos/seed/fashion1/1600/500" alt="Trending sneakers sale" /></div>
+            <div class="slide"><img src="https://picsum.photos/seed/fashion2/1600/500" alt="New season jackets" /></div>
+            <div class="slide"><img src="https://picsum.photos/seed/fashion3/1600/500" alt="Accessories and watches" /></div>
+            <div class="slide"><img src="https://picsum.photos/seed/fashion4/1600/500" alt="Formal wear collection" /></div>
+            <div class="slide"><img src="https://picsum.photos/seed/fashion5/1600/500" alt="Athleisure picks" /></div>
+            <div class="slide"><img src="https://picsum.photos/seed/fashion6/1600/500" alt="Street style edits" /></div>
+          </div>
+          <button class="slider-arrow prev" type="button" aria-label="Previous slide">‹</button>
+          <button class="slider-arrow next" type="button" aria-label="Next slide">›</button>
+          <div class="slider-dots" role="tablist" aria-label="Slide selector"></div>
+        </div>
+      </section>
+      
+      <!-- Hero Section: Title, search bar, and prominent CTA -->
+      <section class="hero section-divider" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <span class="hero-badge">AI-Powered Styling</span>
+              <h1 id="hero-title">Your Personal Style Revolution</h1>
+              <p class="hero-subtitle">
+                Discover your perfect style with our AI-powered outfit recommendations, curated by professional stylists just for you.
+              </p>
+
+              <form class="search" role="search" aria-label="Outfit Search" onsubmit="return false;">
+                <label class="sr-only" for="searchInput">Search outfits, brands, or styles</label>
+                <input
+                  id="searchInput"
+                  type="search"
+                  name="q"
+                  placeholder="Search outfits, brands, or styles..."
+                  autocomplete="off"
+                />
+                <button class="btn btn-primary" id="searchBtn" type="button">Search</button>
+              </form>
+
+              <div class="hero-actions">
+                <a href="avatar.html" class="btn btn-accent" id="heroCta">Create Your 3D Avatar &amp; Try Outfits →</a>
+                <a href="outfit.html" class="btn btn-outline">Browse Outfits</a>
+              </div>  
+
+              <div class="stats" aria-label="Highlights">
+                <div class="stat-item"><div class="stat-number">10k+</div><div class="stat-label">Happy Clients</div></div>
+                <div class="stat-item"><div class="stat-number">50k+</div><div class="stat-label">Styled Outfits</div></div>
+                <div class="stat-item"><div class="stat-number">4.9★</div><div class="stat-label">User Rating</div></div>
+              </div>
+            </div>
+
+            <div class="hero-illustration" aria-hidden="true">
+              <div class="illu-card">
+                <img src="https://picsum.photos/seed/hero/900/900" alt="Fashion hero showcase" />
+              </div>
+              <div class="hero-illus-badge">Try it on</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outfit Cards Section -->
+      <section class="occasions section-divider" aria-labelledby="outfit-heading">
+        <div class="container">
+          <h2 id="outfit-heading">Curated Style Collections</h2>
+          <div class="occasion-cards" role="list">
+            <article class="occasion-card" role="listitem">
+              <button type="button" class="like-btn" aria-label="Like this outfit">♥</button>
+              <img src="https://picsum.photos/seed/outfit1/600/900" alt="Casual summer outfit" />
+              <h3 class="card-title">Summer Casual Look</h3>
+            </article>
+            <article class="occasion-card" role="listitem">
+              <button type="button" class="like-btn" aria-label="Like this outfit">♥</button>
+              <img src="https://picsum.photos/seed/outfit2/600/900" alt="Business formal outfit" />
+              <h3 class="card-title">Business Formal</h3>
+            </article>
+            <article class="occasion-card" role="listitem">
+              <button type="button" class="like-btn" aria-label="Like this outfit">♥</button>
+              <img src="https://picsum.photos/seed/outfit3/600/900" alt="Party wear outfit" />
+              <h3 class="card-title">Party Glamour</h3>
+            </article>
+            <article class="occasion-card" role="listitem">
+              <button type="button" class="like-btn" aria-label="Like this outfit">♥</button>
+              <img src="https://picsum.photos/seed/outfit4/600/900" alt="Casual streetwear outfit" />
+              <h3 class="card-title">Street Style</h3>
+            </article>
+          </div>
+        </div>
+
+        <div class="container">
+         
+          <div class="occasion-cards" role="list">
+            <article class="occasion-card" role="listitem">
+              <button type="button" class="like-btn" aria-label="Like this outfit">♥</button>
+              <img src="https://picsum.photos/seed/outfit1/600/900" alt="Casual summer outfit" />
+              <h3 class="card-title">Summer Casual Look</h3>
+            </article>
+            <article class="occasion-card" role="listitem">
+              <button type="button" class="like-btn" aria-label="Like this outfit">♥</button>
+              <img src="https://picsum.photos/seed/outfit2/600/900" alt="Business formal outfit" />
+              <h3 class="card-title">Business Formal</h3>
+            </article>
+            <article class="occasion-card" role="listitem">
+              <button type="button" class="like-btn" aria-label="Like this outfit">♥</button>
+              <img src="https://picsum.photos/seed/outfit3/600/900" alt="Party wear outfit" />
+              <h3 class="card-title">Party Glamour</h3>
+            </article>
+            <article class="occasion-card" role="listitem">
+              <button type="button" class="like-btn" aria-label="Like this outfit">♥</button>
+              <img src="https://picsum.photos/seed/outfit4/600/900" alt="Casual streetwear outfit" />
+              <h3 class="card-title">Street Style</h3>
+            </article>
+          </div>
+        </div>
+
+        <div class="container">
+        
+          <div class="occasion-cards" role="list">
+            <article class="occasion-card" role="listitem">
+              <button type="button" class="like-btn" aria-label="Like this outfit">♥</button>
+              <img src="https://picsum.photos/seed/outfit1/600/900" alt="Casual summer outfit" />
+              <h3 class="card-title">Summer Casual Look</h3>
+            </article>
+            <article class="occasion-card" role="listitem">
+              <button type="button" class="like-btn" aria-label="Like this outfit">♥</button>
+              <img src="https://picsum.photos/seed/outfit2/600/900" alt="Business formal outfit" />
+              <h3 class="card-title">Business Formal</h3>
+            </article>
+            <article class="occasion-card" role="listitem">
+              <button type="button" class="like-btn" aria-label="Like this outfit">♥</button>
+              <img src="https://picsum.photos/seed/outfit3/600/900" alt="Party wear outfit" />
+              <h3 class="card-title">Party Glamour</h3>
+            </article>
+            <article class="occasion-card" role="listitem">
+              <button type="button" class="like-btn" aria-label="Like this outfit">♥</button>
+              <img src="https://picsum.photos/seed/outfit4/600/900" alt="Casual streetwear outfit" />
+              <h3 class="card-title">Street Style</h3>
+            </article>
+          </div>
+        </div>
+        
+      </section>
+
+      <!-- New Grid Section: 4x5 grid layout -->
+      <section class="occasions section-divider" aria-labelledby="grid-heading">
+        <div class="container">
+          <h2 id="grid-heading">Style Showcase</h2>
+          <div class="gallery" role="list">
+            <article class="gallery-item" role="listitem">
+              <figure>
+                <img src="https://picsum.photos/seed/grid1/600/800" alt="Casual streetwear" />
+                <figcaption>Casual Streetwear</figcaption>
+              </figure>
+            </article>
+            <article class="gallery-item" role="listitem">
+              <figure>
+                <img src="https://picsum.photos/seed/grid2/600/800" alt="Summer collection" />
+                <figcaption>Summer Collection</figcaption>
+              </figure>
+            </article>
+            <article class="gallery-item" role="listitem">
+              <figure>
+                <img src="https://picsum.photos/seed/grid3/600/800" alt="Formal wear" />
+                <figcaption>Formal Wear</figcaption>
+              </figure>
+            </article>
+            <article class="gallery-item" role="listitem">
+              <figure>
+                <img src="https://picsum.photos/seed/grid4/600/800" alt="Accessories" />
+                <figcaption>Accessories</figcaption>
+              </figure>
+            </article>
+            <article class="gallery-item" role="listitem">
+              <figure>
+                <img src="https://picsum.photos/seed/grid5/600/800" alt="Winter collection" />
+                <figcaption>Winter Collection</figcaption>
+              </figure>
+            </article>
+            <article class="gallery-item" role="listitem">
+              <figure>
+                <img src="https://picsum.photos/seed/grid6/600/800" alt="Party wear" />
+                <figcaption>Party Wear</figcaption>
+              </figure>
+            </article>
+            <article class="gallery-item" role="listitem">
+              <figure>
+                <img src="https://picsum.photos/seed/grid7/600/800" alt="Sports wear" />
+                <figcaption>Sports Wear</figcaption>
+              </figure>
+            </article>
+            <article class="gallery-item" role="listitem">
+              <figure>
+                <img src="https://picsum.photos/seed/grid8/600/800" alt="Ethnic wear" />
+                <figcaption>Ethnic Wear</figcaption>
+              </figure>
+            </article>
+            <article class="gallery-item" role="listitem">
+              <figure>
+                <img src="https://picsum.photos/seed/grid9/600/800" alt="Beach wear" />
+                <figcaption>Beach Wear</figcaption>
+              </figure>
+            </article>
+            <article class="gallery-item" role="listitem">
+              <figure>
+                <img src="https://picsum.photos/seed/grid10/600/800" alt="Office wear" />
+                <figcaption>Office Wear</figcaption>
+              </figure>
+            </article>
+            <article class="gallery-item" role="listitem">
+              <figure>
+                <img src="https://picsum.photos/seed/grid11/600/800" alt="Designer collection" />
+                <figcaption>Designer Collection</figcaption>
+              </figure>
+            </article>
+            <article class="gallery-item" role="listitem">
+              <figure>
+                <img src="https://picsum.photos/seed/grid12/600/800" alt="Wedding collection" />
+                <figcaption>Wedding Collection</figcaption>
+              </figure>
+            </article>
+             
+         
+   
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer: Simple footer with copyright -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> StyloOutfit. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- SAHI JAVASCRIPT PATH -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
+
